@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+$font: "Overpass", sans-serif;
+$orange: #fb7413;
+$White: hsl(0, 0%, 100%);
+$Light_Grey: hsl(217, 12%, 63%);
+$Medium_Grey: hsl(216, 12%, 54%);
+$Dark_Blue: hsl(213, 19%, 18%);
+$Very_Dark_Blue: hsl(216, 12%, 8%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-size: 15px;
+  font-family: $font;
+  background-color: $Very_Dark_Blue;
+  padding: 1rem;
+  overflow-y: hidden;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  margin: 1.2rem;
+  max-width: 370px;
+  width: 100%;
+  margin-inline: auto;
+  .card {
+    background-color: $Dark_Blue;
+    // padding: 1rem;
+    border-radius: 0.7rem;
+    .img {
+      img {
+        background-color: $Dark_Blue;
+        box-shadow: 0px 0px 10rem 12rem rgba(0, 0, 0, 0.258);
+        border-radius: 50%;
+        padding: 0.6rem;
+        margin-top: 1rem;
+        margin-left: 1.3rem;
+      }
+    }
+
+    .text-section {
+      h1 {
+        color: $White;
+        font-size: 1.3rem;
+        margin-left: 1.3rem;
+        margin-block: 0.55rem;
+      }
+      p {
+        margin-inline: 1.3rem;
+        color: $Light_Grey;
+        margin-bottom: 1.1rem;
+      }
+    }
+
+    .buttons {
+      max-width: 100%;
+      width: 100%;
+      margin-inline: auto;
+      margin-top: 1.5rem;
+      padding-inline: 1rem;
+      margin-bottom: 1.1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.95rem;
+      .btn {
+        background-color: $Dark_Blue;
+        box-shadow: 0 0 5rem 1.2rem rgba(0, 0, 0, 0.072);
+        color: $Light_Grey;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        border-radius: 100%;
+        padding-block: 0.8rem;
+        padding-inline: 1.1rem;
+        font-family: $font;
+        font-size: 1rem;
+      }
+      .btn:hover {
+        cursor: pointer;
+        background-color: $White;
+        color: #fb7413;
+      }
+      //button clicked
+      .clicked {
+        background-color: $orange;
+        color: $White;
+      }
+    }
+  }
+
+  .submit {
+    background-color: $orange;
+    border: none;
+    outline: none;
+    color: $White;
+    font-family: $font;
+    font-size: 1rem;
+    display: block;
+    max-width: 85%;
+    width: 100%;
+    margin-inline: auto;
+    margin-bottom: 1.2rem;
+    padding-inline: 0.8rem;
+    padding-block: 0.9rem;
+    border-radius: 5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .submit:hover {
+    cursor: pointer;
+    background-color: $White;
+    color: $orange;
+  }
+}
+
+//Hide card
+.hidden {
+  display: none;
+}
+
+//Modal Design
+.modal {
+  max-width: 300px;
+  width: 100%;
+  margin: 0.5rem;
+  margin-inline: auto;
+  background-color: $Dark_Blue;
+  border-radius: 0.7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .modal-img {
+    padding-top: 1.2rem;
+    margin-bottom: 1rem;
+    img {
+      display: block;
+      margin-inline: auto;
+    }
+  }
+
+  .ratings {
+    width: 70%;
+    margin-inline: auto;
+    margin-top: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: $orange;
+    background-color: $Dark_Blue;
+    box-shadow: 0 0 5rem 1.2rem rgba(0, 0, 0, 0.497);
+    border-radius: 5rem;
+    padding-block: 0.3rem;
+  }
+
+  h1 {
+    color: $White;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p.appreciation {
+    padding-inline: 1rem;
+    margin-bottom: 1.8rem;
+    margin-inline: auto;
+    color: $Light_Grey;
+    text-align: center;
+  }
+}

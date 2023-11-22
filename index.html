@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="img">
+        <img src="./images/icon-star.svg" alt="star-icon">
+      </div>
+
+      <div class="text-section">
+        <h1>How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+          offering!</p>
+      </div>
+
+      <div class="buttons">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn">3</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+      </div>
+
+      <button class="submit">SUBMIT</button>
+    </div>
+  </div>
+
+  <!-- Thank you part -->
+  <div class="modal hidden">
+    <div class="modal-img">
+      <img src="./images/illustration-thank-you.svg" alt="Thank You">
+    </div>
+    <div class="ratings">
+      <p>You selected <span class="rate">4</span> out of 5</p>
+    </div>
+    <h1>Thank you!</h1>
+    <p class="appreciation">We appreciate you taking the time to give a rating. If you ever need more support, don't
+      hesitate to get in touch!</p>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
