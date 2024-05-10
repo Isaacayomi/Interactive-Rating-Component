@@ -6,18 +6,16 @@ const rate = document.querySelector(".rate");
 const submit = document.querySelector(".submit");
 
 const selectRateBtn = function () {
-  for (let i = 0; i < buttonsEl.length; i++) {
-    buttonsEl[i].addEventListener("click", () => {
-      if (!buttonsEl[i].classList.contains("clicked")) {
-        buttonsEl[i].classList.add("clicked");
+  buttonsEl.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      if (!btn.classList.contains("clicked")) {
+        btn.classList.add("clicked");
       } else {
-        buttonsEl[i].classList.remove("clicked");
+        btn.classList.remove("clicked");
       }
-
-      //Stores the content of the button i clicked into rate innerText
-      rate.textContent = buttonsEl[i].textContent;
+      rate.textContent = btn.textContent;
     });
-  }
+  });
 };
 selectRateBtn();
 
@@ -27,3 +25,5 @@ const submitRating = function () {
 };
 
 submit.addEventListener("click", submitRating);
+
+// container.style.border = "1px solid red";
