@@ -1,4 +1,4 @@
-const bodyEl = document.querySelector(".el");
+const bodyEl = document.querySelector("body");
 const container = document.querySelector(".container");
 const buttonsEl = document.querySelectorAll(".btn");
 const modal = document.querySelector(".modal");
@@ -24,6 +24,17 @@ const submitRating = function () {
   modal.classList.remove("hidden");
 };
 
-submit.addEventListener("click", submitRating);
+const exitModal = function (e) {
+  if (submitRating) {
+    if (e.key === "Escape") {
+      container.classList.remove("hidden");
+      modal.classList.add("hidden");
+      buttonsEl.forEach((btn) => {
+        btn.classList.remove("clicked");
+      });
+    }
+  }
+};
 
-// container.style.border = "1px solid red";
+submit.addEventListener("click", submitRating);
+bodyEl.addEventListener("keyup", exitModal);

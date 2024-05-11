@@ -14,18 +14,26 @@ body {
   overflow-y: hidden;
 }
 
-.container {
-  display: grid;
+main {
+  position: relative;
   height: 100vh;
-  place-content: center;
+}
+
+.container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
   margin: 1.2rem;
   max-width: 370px;
   width: 100%;
   margin-inline: auto;
 }
+
 .container .card {
   background-color: hsl(213, 19%, 18%);
   border-radius: 0.7rem;
+  padding-bottom: 1rem;
 }
 .container .card .img img {
   background-color: hsl(213, 19%, 18%);
@@ -151,4 +159,15 @@ body {
   margin-inline: auto;
   color: hsl(217, 12%, 63%);
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.modal p.remove__modal {
+  padding-inline: 1rem;
+  /* margin-inline: auto; */
+  color: hsl(217, 12%, 63%);
+  font-size: 0.7rem;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */
